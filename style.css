@@ -54,3 +54,27 @@ body {
 #img4:checked ~ .m4 {
     margin-left: -300%;
 }
+}
+#img5:checked ~ .m5 {
+    margin-left: -400%;
+}
+}
+#img6:checked ~ .m6 {
+    margin-left: -500%;
+}
+}
+#img7:checked ~ .m7 {
+    margin-left: -600%;
+}
+}
+#img8:checked ~ .m8 {
+    margin-left: -700%;
+}
+}
+#img9:checked ~ .m9 {
+    margin-left: -800%;
+}
+}
+#img10:checked ~ .m10 {
+    margin-left: -900%;
+}
