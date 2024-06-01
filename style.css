@@ -1,37 +1,24 @@
-.images img {
-    height: 400px;
-    width: 100%;
-    transition: all 0.15s ease;
-    margin-left: 0; /* add this line to reset margin-left */
-}
+/* existing styles */
 
-#img1:checked ~.m1 {
-    margin-left: 0;
+.gallery  {
+  --d: 6s; /* duration */
+  
+  display: grid;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg,#0000,#000 10% 90%,#0000);
 }
-#img2:checked ~.m2 {
-    margin-left: 0;
+.gallery > img {
+  grid-area: 1/1;
+  height: 200px;
+  aspect-ratio: 1.5;
+  object-fit: cover;
+  animation: r var(--d) linear infinite;
 }
-#img3:checked ~.m3 {
-    margin-left: 0;
-}
-#img4:checked ~.m4 {
-    margin-left: 0;
-}
-#img5:checked ~.m5 {
-    margin-left: 0;
-}
-#img6:checked ~.m6 {
-    margin-left: 0;
-}
-#img7:checked ~.m7 {
-    margin-left: 0;
-}
-#img8:checked ~.m8 {
-    margin-left: 0;
-}
-#img9:checked ~.m9 {
-    margin-left: 0;
-}
-#img10:checked ~.m10 {
-    margin-left: 0;
+.gallery > img:nth-child(2) {animation-delay: calc(1*var(--d)/-4)}
+.gallery > img:nth-child(3) {animation-delay: calc(2*var(--d)/-4)}
+.gallery > img:nth-child(4) {animation-delay: calc(3*var(--d)/-4)}
+
+@keyframes r {
+  75%    {transform: translate(-300%)}
+  75.01% {transform: translate( 100%)}
 }
